@@ -1,0 +1,52 @@
+/* PrimeReact theme and core styles */
+@import 'primereact/resources/themes/lara-light-indigo/theme.css';
+@import 'primereact/resources/primereact.min.css';
+@import 'primeicons/primeicons.css';
+
+
+/* Tailwind CSS layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --surface-a: #f6dcab;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom dialog content styling */
+.p-dialog .p-dialog-content {
+  background-color: #f6dcab !important;
+}
+
+/* Apply to the entire document */
+body::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #dddddd; /* Track color */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 2px; /* Rounded edges */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
+}
